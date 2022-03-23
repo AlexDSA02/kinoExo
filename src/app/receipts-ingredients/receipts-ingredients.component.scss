@@ -1,0 +1,84 @@
+:host {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+}
+.ingredientsDiv{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  padding-left: 20px;
+  padding-right: 20px;
+  //background-color: red;
+}
+
+.tabIngredients{
+  border: 2px black solid;
+  border-radius: 7px;
+  height: 800px;
+  width: 80%;
+  overflow: scroll;
+}
+.tabIngredients > p{
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}.tabIngredients > p:hover{
+  background-color: var(--yellow);
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.toto{
+  display: flex;
+  flex-flow: row;
+  width: 90%;
+  overflow: scroll;
+  padding: 20px;
+}
+
+.recettesDiv{
+  //background-color: red;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  display: flex;
+  overflow: scroll;
+  flex-flow: column;
+}
+.recetteDiv{
+  margin-left: 20px;
+  display: flex;
+  flex-flow: column;
+  background-color: black;
+}
+.recetteDescDiv{
+  margin: 20px;
+  padding-top: 20px;
+  border-top: 3px var(--yellow) solid;
+}
+.nameDrink{
+  margin-bottom: 8px;
+  font-size: 25px;
+  color: var(--yellow);
+}
+.ingrdientDrink{
+  color: var(--yellow);
+}
+.title{
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 850px) {
+.toto{
+  width: 250px;
+}
+}

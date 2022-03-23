@@ -1,0 +1,27 @@
+<div class="ingredientsDiv">
+  <p class="title">Liste des ingrédients</p>
+  <div class="tabIngredients">
+    <p *ngFor="let ingredient of ingredientsArray" (click)="selectIngredient(ingredient)" id="id{{ingredient}}">{{ ingredient }}</p>
+  </div>
+</div>
+
+<div class="recettesDiv">
+  <div class="toto">
+    <div class="recetteDiv" *ngFor="let drink of drinksArrayDisplay">
+      <div class="recetteImgDiv">
+        <img src="{{drink.image}}" height="250px" width="250px">
+      </div>
+      <div class="recetteDescDiv">
+        <p class="nameDrink">{{drink.nameDrink}}</p>
+          <p *ngFor="let ingredient of drink.ingredientsMesureList" class="ingrdientDrink">{{ingredient.mesure}} {{ingredient.ingredient}}</p>
+      </div>
+    </div>
+    <div *ngIf="drinksArrayDisplay.length === 0 && ingredientsSelectedArray.length === 0">
+      <p>Please select ingredients</p>
+    </div>
+    <div *ngIf="drinksArrayDisplay.length === 0 && ingredientsSelectedArray.length !== 0">
+      <p>No receipts for this selected ingredients !</p>
+    </div>
+  </div>
+</div>
+
