@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ReceiptsIngredientsComponent } from './receipts-ingredients/receipts-ingredients.component';
 
 const appRoutes: Routes = [
-  {path: 'ri', component: ReceiptsIngredientsComponent},
+  {path: 'drink', component: ReceiptsIngredientsComponent},
 ]
 
 @NgModule({
